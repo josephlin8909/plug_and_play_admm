@@ -50,16 +50,16 @@ class ImagenetDataset(Dataset):
         self.files = img_files
         self.is_train = is_train
         self.train_transform = pth_transforms.Compose([      
-            pth_transforms.Resize(480),
+            #pth_transforms.Resize(480),
             pth_transforms.GaussianBlur(kernel_size=3, sigma=1),
-            pth_transforms.RandomCrop(128),
+            #pth_transforms.RandomCrop(128),
             pth_transforms.ToTensor(),             
             ])
 
         self.test_transform = pth_transforms.Compose([      
-            pth_transforms.Resize(480),
+            #pth_transforms.Resize(480),
             pth_transforms.GaussianBlur(kernel_size=3, sigma=1),
-            pth_transforms.CenterCrop(128),
+            #pth_transforms.CenterCrop(128),
             pth_transforms.ToTensor(),             
             ])
 
